@@ -1,10 +1,9 @@
 import { AppSetUp } from "./appsetUp";
 let RSVP = require('rsvp');
 
+export class Application {
 
-class Application {
-
-    static run() {
+  public  static run() {
 
         return new RSVP.Promise((res, rej) => {
 

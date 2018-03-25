@@ -1,6 +1,5 @@
 
 let RSVP = require('rsvp');
-import { logs } from './logger';
 
 export class ClsCart {
 
@@ -11,7 +10,6 @@ export class ClsCart {
 
             if (cart && cart.id) {
                 // TODO : call data base function to save card
-               logs.info('hello  ');
                 res(cart);
             } else {
                 res({ error: { message: 'invalid para' } });
