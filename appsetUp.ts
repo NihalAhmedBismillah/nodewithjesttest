@@ -6,6 +6,8 @@ let async = require('async'),
     logger = require('morgan'),
     methodOverride = require('method-override');
 
+export const app = express();
+
 class middleWare {
 
     public static init(app) {
@@ -24,14 +26,12 @@ class middleWare {
 
 }
 
-
-
 export class AppSetUp {
 
     public static init() {
 
         return new RSVP.Promise((res, rej) => {
-            let app = express();
+            //let app = express();
             middleWare.init(app).then(() => {
                 return CartController.init(app);
             }).
